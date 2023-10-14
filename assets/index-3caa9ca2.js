@@ -39,7 +39,7 @@
         ${t.html??""}
       </div>
     </div>
-  `}const K=t=>({...t,construct(){window.scrollTo(0,0),setTimeout(()=>{var e;(e=t.construct)==null||e.call(t)},0)}}),qt=`
+  `}const K=t=>({...t,construct(){window.scrollTo(0,0),setTimeout(()=>{var e;window.scrollTo(0,0),(e=t.construct)==null||e.call(t)},0)}}),qt=`
   <br>
   <blockquote id="projects__fun-fact-container" class="projects__intro-animation">
     <p>
