@@ -1,0 +1,68 @@
+.start-diamond-button {
+  background: none;
+  border: none;
+  position: relative;
+  color: #242424;
+  isolation: isolate;
+  font-weight: 600;
+  font-size: 1.5rem;
+  opacity: .5;
+  transition: all .25s cubic-bezier(.39, 1.09, .61, 1.27);
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+  height: calc(7.5rem * 1.414);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.start-diamond-button:hover:not(.activated-fill-button), #auto-scroll-btn:focus, #auto-scroll-btn:focus-visible {
+  opacity: 1;
+  transform: translateY(-1rem);
+}
+
+.start-diamond-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 7.5rem;
+  width: 7.5rem;
+  background: linear-gradient(to left, rgb(115, 115, 115), rgb(165, 165, 165));
+  box-shadow: 0 0 .5rem .1rem rgba(250, 250, 250, 0.2);
+  top: calc(50% - .2rem);
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all .5s ease-in-out;
+}
+
+.start-diamond-button::after {
+  content: "";
+  opacity: 0;
+}
+
+.activated-fill-button {
+  opacity: 1;
+  rotate: 0;
+  transition: all .5s ease-in-out;
+  position: relative;
+}
+
+.activated-fill-button::before {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.25);
+  width: 100vmax;
+  height: 100vmax;
+}
+
+.activated-fill-button::after {
+  position: absolute;
+  display: block;
+  height: 100vmax;
+  width: 100vmax;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: background-color .5s .5s ease-in-out;
+  background: #242424;
+  opacity: 1;
+}

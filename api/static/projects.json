@@ -1,0 +1,124 @@
+{
+  "projects": [
+    {
+      "name": "Voxyl-Overlay",
+      "desc": "A desktop application utility for certain Minecraft servers",
+      "tags": ["Kotlin", "Compose Multiplatform", "App"],
+      "url": "https://github.com/BWP-Stats/Voxyl-Overlay",
+      "stars": 6
+    },
+    {
+      "name": "Realworld-Scotty-HS",
+      "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
+      "tags": ["Haskell", "Scotty", "PostgreSQL"],
+      "url": "https://github.com/toptobes/realworld-scotty-hs",
+      "stars": 9
+    },
+    {
+      "name": "Blacksmith",
+      "desc": "A fully-fledged declarative FTC Robotics software library complete w/ documentation site",
+      "tags": ["Kotlin", "Java", "TypeScript", "ReactJS", "Library"],
+      "url": "https://github.com/toptobes/robot-code-v2",
+      "stars": 4
+    },
+    {
+      "name": "File-System-System",
+      "desc": "A file-system based programming language that transpiles to JS",
+      "tags": ["Haskell", "Compiler"],
+      "url": "https://github.com/toptobes/file-system-system"
+    },
+    {
+      "name": "2048-ASM",
+      "desc": "A colored 2048 terminal game made in MASM x64 assembly",
+      "tags": ["Assembly", "CLI"],
+      "url": "https://github.com/toptobes/ASMPlaygroundV2",
+      "stars": 3
+    },
+    {
+      "name": "Magic-Square-ASM",
+      "desc": "Magic square creator & checker using some AVX512 & x87 (made for a school project who wanted it in Python lol)",
+      "tags": ["Assembly", "SIMD", "CLI"],
+      "url": "https://github.com/toptobes/ASMPlaygroundV2",
+      "stars": 3
+    },
+    {
+      "name": "BadVM",
+      "desc": "A small 16-bit VM written in C w/ a custom typed Assembly lang written in Kotlin",
+      "tags": ["C", "Kotlin", "Assembly", "VM", "Compiler"],
+      "url": "https://github.com/toptobes/BadVm",
+      "stars": 1
+    },
+    {
+      "name": "Chess3D",
+      "desc": "A WIP multiplayer 3D chess game (4 layers of boards) for the web made in collaboration with <span style=\"text-decoration: underline;\">T-Lind</span>",
+      "tags": ["TypeScript", "SCSS", "ExpressJS", "ReactJS", "ThreeJS", "WebSockets", "SQLite"],
+      "url": "https://github.com/T-Lind/chess-3d-dev"
+    },
+    {
+      "name": "KineticClock",
+      "desc": "A small but extremely satisfying kinetic clock desktop app",
+      "tags": ["Kotlin", "Compose Multiplatform", "App"],
+      "url": "https://github.com/toptobes/KineticClock",
+      "stars": 2
+    },
+    {
+      "name": "Astra-Spring-Demo",
+      "desc": "An open-source demonstration of AstraDB's indexing capabilities from my internship @ DataStax",
+      "tags": ["TypeScript", "Java", "Python", "SCSS", "Spring", "WebSockets", "AI/ML", "AstraDB"],
+      "url": "https://github.com/toptobes/astra-demo",
+      "stars": 4
+    },
+    {
+      "name": "Sentinel Dashboard",
+      "desc": "An unfinished dashboard and backend api for an abandoned Discord bot",
+      "tags": ["JavaScript", "TypeScript", "ReactJS", "NestJS", "MongoDB"],
+      "url": "https://github.com/VXFreelance/SentinelWebsite"
+    },
+    {
+      "name": "BadLisp",
+      "desc": "A badly-implemented lisp that compiles down to C",
+      "tags": ["C", "Lisp", "Compiler"],
+      "url": "https://github.com/toptobes/BadLisp",
+      "stars": 1
+    },
+    {
+      "name": "brainf",
+      "desc": "An extremely small (176 chars) brainf**k interpreter",
+      "tags": ["C", "Interpreter"],
+      "url": "https://github.com/toptobes/brainf",
+      "stars": 1
+    },
+    {
+      "name": "jsonh",
+      "desc": "A quick 'n' dirty JSON prettifier/minifier",
+      "tags": ["Haskell", "CLI"],
+      "url": "https://github.com/toptobes/jsonh"
+    },
+    {
+      "name": "MC-1.8.9-Utils",
+      "desc": "A collection of small utility mods for Minecraft using the ChatTriggers framework",
+      "tags": ["JavaScript"],
+      "url": "https://github.com/toptobes/MC-1.8-Utils",
+      "stars": 1
+    },
+    {
+      "name": "Sorts-CS3",
+      "desc": "Small program using CUDA using the CUB library to sort 1B ints as fast as possible on my GPU for my high school's CS class's speed sorting comp :)",
+      "tags": ["C++", "CUDA", "SIMT"],
+      "url": "https://github.com/toptobes/sorts_cs3",
+      "stars": 1
+    },
+    {
+      "name": "BCD to 7-seg display",
+      "desc": "A BCD to 7-segment display written using piecewise functions and such in the form of logic gates n Desmos",
+      "tags": ["Desmos"],
+      "url": "https://www.desmos.com/calculator/l1qqsu2yxn"
+    },
+    {
+      "name": "Flappy Bird",
+      "desc": "A game of flappy bird written in Desmos (w/ collisions)",
+      "tags": ["Desmos"],
+      "url": "https://www.desmos.com/calculator/9nluneba1a"
+    }
+  ]
+}

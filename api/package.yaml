@@ -1,0 +1,55 @@
+name: portfolio-api
+version: 0.1.0.0
+github: "toptobes/portfolio"
+author: "toptobes"
+
+language: GHC2021
+
+ghc-options:
+  - -Wall
+  - -Wno-orphans
+  - -Wno-unrecognised-pragmas
+  - -O1
+
+default-extensions:
+  - LambdaCase
+  - BlockArguments
+  - RecordWildCards
+  - OverloadedRecordDot
+  - OverloadedLabels
+  - OverloadedStrings
+  - DuplicateRecordFields
+  - DeriveAnyClass
+  - DerivingStrategies
+  - FunctionalDependencies
+  - UnicodeSyntax
+  - LinearTypes
+  - DataKinds
+  - TypeFamilies
+  - GADTs
+  - ViewPatterns
+
+dependencies:
+  - base >=4.16.4.0
+  - relude >=1.2.0.0
+  - scotty >= 0.20.1
+  - wai-extra
+  - wai-middleware-static
+  - warp
+  - wai-cors
+
+library:
+  source-dirs: src
+  default-extensions:
+    - NoFieldSelectors
+    - NoImplicitPrelude
+
+executables:
+  app:
+    main: Main.hs
+    source-dirs: app
+    dependencies: portfolio-api
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N

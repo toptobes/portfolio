@@ -1,0 +1,5 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/21/22.yaml
+
+extra-deps:
+  - scotty-0.20.1@sha256:c6c38727407c1e925ba44b55686f7a18526dbddb138317eb637a1cb1df3cff09,5382

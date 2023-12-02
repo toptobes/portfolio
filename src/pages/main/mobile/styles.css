@@ -1,0 +1,21 @@
+@import "../shared/styles.css";
+
+#mobile-main__buttons-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem 3rem;
+  gap: 8rem;
+}
+
+#mobile-main__buttons-container > * {
+  scale: 1.4;
+}
+
+#mobile-main__disclaimer-container {
+  width: 100%;
+  text-align: center;
+  padding-block: 1rem;
+}

@@ -1,0 +1,107 @@
+#about-me__body-container {
+  display: grid;
+  grid-template-columns: 50% 10% 40%;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 666px) {
+  #about-me__body-container {
+    display: flex;
+    flex-flow: column-reverse;
+    font-size: 1rem;
+  }
+
+  #about-me__squares-container {
+    transform: translateY(-2.5%);
+    scale: .8;
+  }
+}
+
+#about-me__squares-container {
+  grid-column: 3;
+  position: relative;
+  right: 0;
+  display: grid;
+  place-items: center;
+  padding-inline: 5%;
+  padding-top: 10%;
+  aspect-ratio: 1;
+}
+
+#about-me__square-1, #about-me__square-2, #about-me__square-3 {
+  background-color: rgb(245, 245, 245, .1);
+  aspect-ratio: 1;
+  border-radius: 0 10% 0 10%;
+}
+
+#about-me__square-2, #about-me__square-3 {
+  position: absolute;
+  width: 90%;
+  filter: drop-shadow(0 0 1rem rgb(245, 245, 245, .5));
+}
+
+#about-me__square-1 {
+  background: linear-gradient(to top left, rgb(150, 150, 150), rgb(200, 200, 200));
+  position: relative;
+  inset: 0;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  animation: .5s ease-out about-me__slide-fade-in-2 forwards;
+  width: 100%;
+}
+
+#about-me__square-2 {
+  left: -5%;
+  bottom: -10%;
+  animation: 1.25s ease-out about-me__slide-fade-in-2 forwards;
+}
+
+#about-me__square-3 {
+  top: 0;
+  right: -5%;
+  animation: 1.25s ease-out about-me__slide-fade-in-3 forwards;
+}
+
+#about-me__profile-pic {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+@keyframes about-me__fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes about-me__slide-fade-in-2 {
+  from {
+    left: 0;
+    bottom: -5%;
+    opacity: 0;
+  }
+}
+
+@keyframes about-me__slide-fade-in-3 {
+  from {
+    top: 5%;
+    right: 0;
+    opacity: 0;
+  }
+}
+
+#about-me__back-to-home-btn {
+  text-decoration: none;
+}
+
+#about-me__back-to-home-btn:hover, #about-me__back-to-home-btn:focus-visible {
+  filter: drop-shadow(0 0 .5rem rgb(245, 245, 245, .5));
+}
+
+#about-me__languages-list {
+  list-style-type: none;
+}
+
+#about-me__languages-list > li::before {
+  content: "- ";
+}

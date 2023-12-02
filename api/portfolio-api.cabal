@@ -1,0 +1,89 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           portfolio-api
+version:        0.1.0.0
+homepage:       https://github.com/toptobes/portfolio#readme
+bug-reports:    https://github.com/toptobes/portfolio/issues
+author:         toptobes
+maintainer:     toptobes
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/toptobes/portfolio
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_portfolio_api
+  hs-source-dirs:
+      src
+  default-extensions:
+      LambdaCase
+      BlockArguments
+      RecordWildCards
+      OverloadedRecordDot
+      OverloadedLabels
+      OverloadedStrings
+      DuplicateRecordFields
+      DeriveAnyClass
+      DerivingStrategies
+      FunctionalDependencies
+      UnicodeSyntax
+      LinearTypes
+      DataKinds
+      TypeFamilies
+      GADTs
+      ViewPatterns
+      NoFieldSelectors
+      NoImplicitPrelude
+  ghc-options: -Wall -Wno-orphans -Wno-unrecognised-pragmas -O1
+  build-depends:
+      base >=4.16.4.0
+    , relude >=1.2.0.0
+    , scotty >=0.20.1
+    , wai-cors
+    , wai-extra
+    , wai-middleware-static
+    , warp
+  default-language: GHC2021
+
+executable app
+  main-is: Main.hs
+  other-modules:
+      Paths_portfolio_api
+  hs-source-dirs:
+      app
+  default-extensions:
+      LambdaCase
+      BlockArguments
+      RecordWildCards
+      OverloadedRecordDot
+      OverloadedLabels
+      OverloadedStrings
+      DuplicateRecordFields
+      DeriveAnyClass
+      DerivingStrategies
+      FunctionalDependencies
+      UnicodeSyntax
+      LinearTypes
+      DataKinds
+      TypeFamilies
+      GADTs
+      ViewPatterns
+  ghc-options: -Wall -Wno-orphans -Wno-unrecognised-pragmas -O1 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.16.4.0
+    , portfolio-api
+    , relude >=1.2.0.0
+    , scotty >=0.20.1
+    , wai-cors
+    , wai-extra
+    , wai-middleware-static
+    , warp
+  default-language: GHC2021

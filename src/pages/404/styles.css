@@ -1,0 +1,123 @@
+#e404__background-img {
+  background:
+    linear-gradient(to bottom, rgb(136, 136, 136, .25), rgb(36, 36, 36)),
+    url("/src/assets/images/backgrounds/peugeot-404.webp")
+    no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: saturate(125%);
+}
+
+#e404__background-img > * {
+  filter: drop-shadow(0 0 .5rem rgb(45, 45, 45, .5));
+}
+
+#e404__code {
+  font-size: 8rem;
+  color: rgb(243, 243, 243);
+  line-height: 8rem;
+}
+
+.e404__code-char {
+  display: inline-block;
+  opacity: 0;
+}
+
+.e404__code-char:nth-child(1) {
+  translate: -1ch -8rem;
+  animation:
+    .6s cubic-bezier(.39, 1.09, .61, 1.27) .5s e404__slide-fade-in-1 forwards,
+    .5s cubic-bezier(.39, .89, .81, 1) 1.3s e404__slide-to-position forwards,
+    2s cubic-bezier(.39, .89, .61, 1.27) 2.5s e404__wave-up infinite;
+}
+
+.e404__code-char:nth-child(2) {
+  animation:
+    .6s cubic-bezier(.39, 1.09, .61, 1.27) .5s e404__slide-fade-in-2 forwards,
+    2s cubic-bezier(.39, 1.09, .61, 1.27) 2.6s e404__wave-up infinite;
+}
+
+.e404__code-char:nth-child(3) {
+  translate: 1ch 8rem;
+  animation:
+    .6s cubic-bezier(.39, 1.09, .61, 1.27) .5s e404__slide-fade-in-3 forwards,
+    .5s cubic-bezier(.39, .89, .81, 1) 1.3s e404__slide-to-position forwards,
+    2s cubic-bezier(.39, .89, .61, 1.27) 2.7s e404__wave-up infinite;
+}
+
+@keyframes e404__slide-fade-in-1 {
+  to {
+    opacity: 1;
+    translate: -1ch 0;
+  }
+}
+
+@keyframes e404__slide-fade-in-2 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes e404__slide-fade-in-3 {
+  to {
+    opacity: 1;
+    translate: 1ch 0;
+  }
+}
+
+@keyframes e404__slide-to-position {
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes e404__wave-up {
+  35%, 65% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -.5ch;
+  }
+}
+
+#e404__home-btn {
+  background: transparent;
+  border: none;
+  transition: .1s all;
+  background: url("/src/assets/icons/home-icon-white.svg") no-repeat center center;
+  background-size: contain;
+  height: 3rem;
+  width: 3rem;
+  animation:
+    .6s cubic-bezier(.39, 1.09, .61, 1.27) 2s e404__slide-fade-in-home forwards,
+    2s cubic-bezier(.39, .89, .61, 1.27) 3.1s e404__wave-down infinite;
+  translate: 0 3rem;
+  opacity: 0;
+}
+
+#e404__home-btn:hover, #e404__home-btn:focus-visible {
+  scale: 1.2;
+  filter: drop-shadow(0 0 .75rem rgb(45, 45, 45));
+  cursor: pointer;
+}
+
+@keyframes e404__slide-fade-in-home {
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes e404__wave-down {
+  35%, 65% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 1ch;
+  }
+}
