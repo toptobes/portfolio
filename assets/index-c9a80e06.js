@@ -7,7 +7,7 @@
     </div>
     <a href="/" data-client id="e404__home-btn"></a>
   </div>
-`,Mt=()=>({path:"*",html:Ft});const pt=t=>e=>({...e,html:'<div id="redirect__container">Redirecting...</div>',construct(){document.location.replace(t)}}),Lt=()=>({path:"/github",mixins:[pt("https://github.com/toptobes")]});const V="toptobes",Ct="/portfolio",Qt="true".toLowerCase()==="true",zt="https://portfolio-api-vuvkuti62q-uc.a.run.app";Math.TAU=Math.PI*2;function Z(t,e=1){const n=t.getContext("2d"),s=t.height=window.innerHeight,o=t.width=window.innerWidth;t.height*=e;const i=o/s,r=i>1?s/2:o/2;return n.height=s,n.width=o,n.clear=()=>n.clearRect(-r,-r,2*r,2*r),n.translate(o/2,s/2),n.scale(r,-r),n.rangeX=i>1?2*i:2,n.rangeY=i>1?2:2/i,n}function Bt(t,e,n){return Math.min(Math.max(t,e),n)}let rt;function O(t){return t*(rt||(rt=parseFloat(getComputedStyle(document.documentElement).fontSize)))}function ft(t,e){const n={};return t.forEach(s=>{const o=new Image;o.src=s,n[s]=o,e&&o.decode().then()}),n}function Zt(t){let e=t[0],n=t[0];for(let s=1;s<t.length;s++)t[s]>e&&(e=t[s]),t[s]<n&&(n=t[s]);return e-n}function J(t,e){let n=!1;return s=>{s?n||(window.addEventListener(t,e,{passive:!0}),n=!0):n&&(window.removeEventListener(t,e),n=!1)}}function qt(t,e){const n=t.indexOf(e);return n>-1&&t.splice(n,1),t}function Yt(t){var c;const e=Math.min(window.innerHeight,((c=window.screen)==null?void 0:c.height)||1/0),n=t.getBoundingClientRect(),s=n.left+n.width/2,o=n.top+n.height/2,i=window.innerWidth/2,r=e/2;return{dx:i-s,dy:r-o}}Array.prototype.partition=function(t){const e=[],n=[];for(const s of this)t(s)?e.push(s):n.push(s);return[e,n]};function _t(t,e,n=!1){let s;return function(...o){const i=()=>{s=void 0,n||t.apply(this,o)},r=n&&!s;clearTimeout(s),s=setTimeout(i,e),r&&t.apply(this,o)}}const Ut=t=>{let e=null;return()=>e??(e=t())},jt=Ut(async()=>{const{projects:t}=await fetch(`${zt}/projects.json`).then(e=>e.json());return Wt(t,Xt)});function Wt(t,e){return t.map(n=>`
+`,Mt=()=>({path:"*",html:Ft});const pt=t=>e=>({...e,html:'<div id="redirect__container">Redirecting...</div>',construct(){document.location.replace(t)}}),Lt=()=>({path:"/github",mixins:[pt("https://github.com/toptobes")]});const V="toptobes",Ct="/portfolio",Qt="true".toLowerCase()==="true",zt="https://portfolio-api-vuvkuti62q-uc.a.run.app";Math.TAU=Math.PI*2;function Z(t,e=1){const n=t.getContext("2d"),s=t.height=window.innerHeight,o=t.width=window.innerWidth;t.height*=e;const i=o/s,r=i>1?s/2:o/2;return n.height=s,n.width=o,n.clear=()=>n.clearRect(-r,-r,2*r,2*r),n.translate(o/2,s/2),n.scale(r,-r),n.rangeX=i>1?2*i:2,n.rangeY=i>1?2:2/i,n}function Bt(t,e,n){return Math.min(Math.max(t,e),n)}let rt;function O(t){return t*(rt||(rt=parseFloat(getComputedStyle(document.documentElement).fontSize)))}function ft(t,e){const n={};return t.forEach(s=>{const o=new Image;o.src=s,n[s]=o,e&&o.decode().then()}),n}function Zt(t){let e=t[0],n=t[0];for(let s=1;s<t.length;s++)t[s]>e&&(e=t[s]),t[s]<n&&(n=t[s]);return e-n}function J(t,e){let n=!1;return s=>{s?n||(window.addEventListener(t,e,{passive:!0}),n=!0):n&&(window.removeEventListener(t,e),n=!1)}}function qt(t,e){const n=t.indexOf(e);return n>-1&&t.splice(n,1),t}function Yt(t){var c;const e=Math.min(window.innerHeight,((c=window.screen)==null?void 0:c.height)||1/0),n=t.getBoundingClientRect(),s=n.left+n.width/2,o=n.top+n.height/2,i=window.innerWidth/2,r=e/2;return{dx:i-s,dy:r-o}}Array.prototype.partition=function(t){const e=[],n=[];for(const s of this)t(s)?e.push(s):n.push(s);return[e,n]};function _t(t,e,n=!1){let s;return function(...o){const i=()=>{s=void 0,n||t.apply(this,o)},r=n&&!s;clearTimeout(s),s=setTimeout(i,e),r&&t.apply(this,o)}}const Ut=t=>{let e=null;return()=>e??(e=t())},jt=Ut(async()=>{const{projects:t}=await fetch(`${zt}/projects.json`).then(e=>e.json());return console.log(t),Wt(t,Xt)});function Wt(t,e){return t.map(n=>`
     <a href="${n.url}" class="projects__card projects__intro-animation">
       <h1>${n.name}${n.stars?" ("+n.stars+"☆)":""}</h1>
       <p>${n.desc}</p>
@@ -40,24 +40,24 @@
       </div>
     </div>
   `}const $=t=>({...t,construct(){window.scrollTo(0,0),setTimeout(()=>{var e;window.scrollTo(0,0),(e=t.construct)==null||e.call(t)},0)}}),Vt=async()=>`
-  <br>
-  <blockquote id="projects__fun-fact-container" class="projects__intro-animation">
-    <p>
-      <span style="font-weight: bolder;">Fun fact:</span>
-      this website was made with absolutely no dependencies; it involved the creation of a
-      tweening library, a small declarative webgl shader library, and a client-side router.
-      (<a id="projects__this-site-source" href="https://github.com/toptobes/portfolio">source code</a>)
-    </p>
-    <div style="height: .25em;"></div>
-    <p style="font-size: .8em;">
-      *If you consider TypeScript or a build tool dependencies, I don't wanna be friends with you :(
-    </p>
-  </blockquote>
-  <br>
-  <div id="projects__cards-container">
-    ${await jt()}
-  </div>
-`,Kt=()=>({path:"/projects",html:Vt(),construct(){document.querySelectorAll(".projects__card").forEach((e,n)=>{const s=n*.1+.1;e.style.animation=`.5s projects__cards-side-fade-in ${s}s cubic-bezier(.39, 1.09, .61, 1.2) forwards`})},mixins:[K(),$]});const $t="/portfolio/assets/profile-icon-d0fc271b.svg",te=`
+    <br>
+    <blockquote id="projects__fun-fact-container" class="projects__intro-animation">
+      <p>
+        <span style="font-weight: bolder;">Fun fact:</span>
+        this website was made with absolutely no dependencies; it involved the creation of a
+        tweening library, a small declarative webgl shader library, and a client-side router.
+        (<a id="projects__this-site-source" href="https://github.com/toptobes/portfolio">source code</a>)
+      </p>
+      <div style="height: .25em;"></div>
+      <p style="font-size: .8em;">
+        *If you consider TypeScript or a build tool dependencies, I don't wanna be friends with you :(
+      </p>
+    </blockquote>
+    <br>
+    <div id="projects__cards-container">
+      ${await jt()}
+    </div>
+  `,Kt=()=>({path:"/projects",html:Vt(),construct(){document.querySelectorAll(".projects__card").forEach((e,n)=>{const s=n*.1+.1;e.style.animation=`.5s projects__cards-side-fade-in ${s}s cubic-bezier(.39, 1.09, .61, 1.2) forwards`})},mixins:[K(),$]});const $t="/portfolio/assets/profile-icon-d0fc271b.svg",te=`
   <div id="about-me__body-container">
     <div>
       <br>
