@@ -1,13 +1,13 @@
 import './styles.css';
-import { Route, RouteMixin } from '../../index.ts';
+import { resolveHTML, Route, RouteMixin } from '../../index.ts';
 import { MY_NAME } from '../../../constants.ts';
 
 export const BasicPage = (noBreakCenter: boolean = false): RouteMixin => (route: Route) => ({
   ...route,
-  html: makeInnerHTML(route, noBreakCenter),
+  html: () => makeInnerHTML(route, noBreakCenter),
 });
 
-function makeInnerHTML(route: Route, noBreakCenter: boolean) {
+async function makeInnerHTML(route: Route, noBreakCenter: boolean) {
   let currentPath = '';
 
   const pathHTML = route.path
@@ -36,7 +36,7 @@ function makeInnerHTML(route: Route, noBreakCenter: boolean) {
         <span style="scale: .95;">$</span>
       </div>
       <div id="basic__page-body">
-        ${route.html ?? ''}
+        ${await resolveHTML(route)}
       </div>
     </div>
   `;

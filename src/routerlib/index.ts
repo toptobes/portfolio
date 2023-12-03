@@ -1,6 +1,6 @@
 export interface Route {
   path: ValidRoute;
-  html?: string | Promise<string>;
+  html?: string | (() => Promise<string>);
   mixins?: RouteMixin[];
   forceReload?: boolean;
   construct?(): void;
@@ -94,13 +94,7 @@ export function initRouter<const Ps extends Providers>(options: RouterOptions<Ps
       reloadPage(route.path);
     }
 
-    $app.innerHTML =
-      (typeof route.html == 'string')
-        ? route.html :
-      (typeof route.html == 'object')
-        ? await route.html
-        : '';
-
+    $app.innerHTML = await resolveHTML(route);
     route.construct?.();
   };
 
@@ -133,3 +127,10 @@ const normalizeRoute = (str: string) => assertedValidRoute(
     ? str.slice(0, -1)
     : str
 );
+
+export const resolveHTML = async (route: Route) =>
+  (typeof route.html === 'string')
+    ? route.html :
+  (typeof route.html === 'function')
+    ? await route.html()
+    : '';

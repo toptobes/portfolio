@@ -1,7 +1,7 @@
 import { API_URL } from '../../constants.ts';
 import { memo } from '../../utils.ts';
 
-export interface Project {
+interface Project {
   name: string,
   desc: string,
   stars?: number,
@@ -11,9 +11,14 @@ export interface Project {
 
 type Colors = typeof colors;
 
-export function getProjectCards(projects: Project[]): string {
-  return makeCards(projects, colors);
+export const preloadCards = () => {
+  getProjectCards().then();
 }
+
+export const getProjectCards = memo(async (): Promise<string> => {
+  const { projects } = await fetch(`${API_URL}/projects.json`).then(d => d.json());
+  return makeCards(projects, colors);
+});
 
 function makeCards(projects: Project[], colors: Colors): string {
   return projects.map(project => `

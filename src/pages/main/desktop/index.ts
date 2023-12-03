@@ -23,7 +23,7 @@ const html = (h: number, w: number) => `
     <button class="start-diamond-button" data-route="/github">github</button>
     <button class="start-diamond-button" data-route="/about-me" id="about-me-btn">about me</button>
     <button class="start-diamond-button" id="auto-scroll-btn">auto<br>scroll<div></div></button>
-    <button class="start-diamond-button" data-route="/projects">projects</button>
+    <button class="start-diamond-button" data-route="/projects" id="projects-btn">projects</button>
     <button class="start-diamond-button" data-route="/linkedin">linkedin</button>
     <div id="start-buttons-snackbar">(Recommended) Scrolls you at an ideal pace. Scroll at any time to stop!</div>
   </div>

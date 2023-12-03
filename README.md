@@ -5,3 +5,7 @@ Pure HTML + CSS + TS w/ my own custom tweening lib, small declarative shaders li
 
 This is just the public version with the identifying info taken out; there's a private repo that's
 hydrated and deployed to my official website using Vercel. You'll have to ask me for the link.
+
+Also added a small API server which serves static content via Haskell + Scotty which is hosted via Google's
+Cloud Run. It's fully static atm, but I plan to have it scrape my GitHub stars in the future to keep the projects
+list up-to-date.

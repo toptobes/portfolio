@@ -1,18 +1,18 @@
 {
   "projects": [
     {
+      "name": "Realworld-HS",
+      "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
+      "tags": ["Haskell", "Scotty", "PostgreSQL"],
+      "url": "https://github.com/toptobes/realworld-scotty-hs",
+      "stars": 9
+    },
+    {
       "name": "Voxyl-Overlay",
       "desc": "A desktop application utility for certain Minecraft servers",
       "tags": ["Kotlin", "Compose Multiplatform", "App"],
       "url": "https://github.com/BWP-Stats/Voxyl-Overlay",
       "stars": 6
-    },
-    {
-      "name": "Realworld-Scotty-HS",
-      "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
-      "tags": ["Haskell", "Scotty", "PostgreSQL"],
-      "url": "https://github.com/toptobes/realworld-scotty-hs",
-      "stars": 9
     },
     {
       "name": "Blacksmith",

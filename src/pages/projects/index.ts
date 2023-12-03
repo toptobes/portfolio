@@ -1,32 +1,36 @@
 import './styles.css'
 import { RouteProvider } from '../../routerlib';
-import { getProjectCards, Project } from './projects.ts';
+import { getProjectCards } from './projects.ts';
 import { BasicPage } from '../../routerlib/mixins/basicpage';
 import { Scroll2Top } from '../../routerlib/mixins/scroll2top';
 
-const html = (projects: Project[]) => `
-  <br>
-  <blockquote id="projects__fun-fact-container" class="projects__intro-animation">
-    <p>
-      <span style="font-weight: bolder;">Fun fact:</span>
-      this website was made with absolutely no dependencies; it involved the creation of a
-      tweening library, a small declarative webgl shader library, and a client-side router.
-      (<a id="projects__this-site-source" href="https://github.com/toptobes/portfolio">source code</a>)
-    </p>
-    <div style="height: .25em;"></div>
-    <p style="font-size: .8em;">
-      *If you consider TypeScript or a build tool dependencies, I don't wanna be friends with you :(
-    </p>
-  </blockquote>
-  <br>
-  <div id="projects__cards-container">
-    ${getProjectCards(projects)}
-  </div>
-`;
+const html = async () => {
+  const cards = await getProjectCards();
 
-export const Projects = (projects: Project[]): RouteProvider => () => ({
+  return `
+    <br>
+    <blockquote id="projects__fun-fact-container" class="projects__intro-animation">
+      <p>
+        <span style="font-weight: bolder;">Fun fact:</span>
+        this website was made with absolutely no dependencies; it involved the creation of a
+        tweening library, a small declarative webgl shader library, and a client-side router.
+        (<a id="projects__this-site-source" href="https://github.com/toptobes/portfolio">source code</a>)
+      </p>
+      <div style="height: .25em;"></div>
+      <p style="font-size: .8em;">
+        *If you consider TypeScript or a build tool dependencies, I don't wanna be friends with you :(
+      </p>
+    </blockquote>
+    <br>
+    <div id="projects__cards-container">
+      ${cards}
+    </div>
+  `;
+}
+
+export const Projects: RouteProvider = () => ({
   path: '/projects',
-  html: html(projects),
+  html: html,
   construct() {
     const cards = document.querySelectorAll<HTMLAnchorElement>('.projects__card')!;
 

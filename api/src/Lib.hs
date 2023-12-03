@@ -12,7 +12,7 @@ import Web.Scotty
 ops :: Port -> Options
 ops port = defaultOptions
   { settings = defaultSettings 
-      & setFdCacheDuration 10
+      & setFdCacheDuration 60
       & setPort port
   , verbose = 1
   }
@@ -35,6 +35,6 @@ main = do
     staticPolicy = addBase "static"
 
     corsPolicy = simpleCorsResourcePolicy 
-      -- { corsMethods = ["GET"]
-      -- , corsMaxAge = Just $ 30 * 60
-      -- }
+      { corsMethods = ["GET"]
+      , corsMaxAge = Just $ 30 * 60
+      }

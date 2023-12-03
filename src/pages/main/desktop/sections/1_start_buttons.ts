@@ -2,6 +2,7 @@ import { rem2pixels } from '../../../../utils.ts';
 import { Router } from '../../../../routerlib';
 import { setupTransitionButton } from '../../shared/transition-button.ts';
 import { tween } from '../../../../tweenlib';
+import { preloadCards } from '../../../projects/projects.ts';
 
 export function StartButtons(routeTo: Router) {
   const $buttons = [...document.querySelectorAll<HTMLButtonElement>('.start-diamond-button')];
@@ -26,12 +27,12 @@ export function StartButtons(routeTo: Router) {
   });
 
   observer.observe($autoScrollButton.parentElement!);
-
-  setupAutoScroller($buttons, $autoScrollButton);
+  setupAutoScroller($autoScrollButton);
 
   $otherButtons.forEach($button => (
     setupTransitionButton($button, routeTo, updateScales)
   ));
+  document.querySelector('#projects-btn')!.addEventListener('click', preloadCards)
 
   return () => {
     document.documentElement.style.overflowY = 'visible';
@@ -39,7 +40,7 @@ export function StartButtons(routeTo: Router) {
   };
 }
 
-function setupAutoScroller($buttons: HTMLButtonElement[], $autoScrollButton: HTMLButtonElement) {
+function setupAutoScroller($autoScrollButton: HTMLButtonElement) {
   let autoScrolling = false;
 
   $autoScrollButton.addEventListener('click', () => {
