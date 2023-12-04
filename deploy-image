@@ -1,9 +1,0 @@
-#!/usr/bin/bash -e
-
-tag="${1-us-central1-docker.pkg.dev/kpg-portfolio/portfolio-repo/portfolio-api}"
-
-cd api
-make image TAG="$tag"
-
-docker push "$tag"
-gcloud run deploy portfolio-api --image "$tag" --region us-central1 --platform managed

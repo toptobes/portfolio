@@ -4,8 +4,8 @@
       "name": "Realworld-HS",
       "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
       "tags": ["Haskell", "Scotty", "PostgreSQL"],
-      "url": "https://github.com/toptobes/realworld-scotty-hs",
-      "stars": 9
+      "url": "https://github.com/toptobes/realworld-haskell-scotty-example",
+      "stars": 13
     },
     {
       "name": "Voxyl-Overlay",
@@ -110,13 +110,13 @@
     },
     {
       "name": "BCD to 7-seg display",
-      "desc": "A BCD to 7-segment display written using piecewise functions and such in the form of logic gates n Desmos",
+      "desc": "A BCD to 7-segment display written using piecewise functions and such in the form of logic gates in Desmos",
       "tags": ["Desmos"],
       "url": "https://www.desmos.com/calculator/l1qqsu2yxn"
     },
     {
       "name": "Flappy Bird",
-      "desc": "A game of flappy bird written in Desmos (w/ collisions)",
+      "desc": "A proper game of flappy bird written in Desmos (w/ collisions)",
       "tags": ["Desmos"],
       "url": "https://www.desmos.com/calculator/9nluneba1a"
     }
