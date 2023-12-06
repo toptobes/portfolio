@@ -37,3 +37,7 @@ fi
 
 # Not sure why, but it gcloud doesn't like it when I run the command directly...
 eval "gcloud run deploy portfolio-api --image $tag --region us-central1 --platform managed $update_vars $gcargs"
+
+if [[ -n "$revprune" && "${revprune,,}" == true ]]; then
+  gcloud run revisions list --filter="status.conditions.type:Active AND status.conditions.status:'False'" --format='value(metadata.name)' --region us-central1 | xargs -r -L1 gcloud run revisions delete --region us-central1 --quiet
+fi

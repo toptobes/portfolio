@@ -5,7 +5,7 @@
       "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
       "tags": ["Haskell", "Scotty", "PostgreSQL"],
       "url": "https://github.com/toptobes/realworld-haskell-scotty-example",
-      "stars": 13
+      "stars": 14
     },
     {
       "name": "Voxyl-Overlay",
