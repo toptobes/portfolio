@@ -28,16 +28,23 @@
       "url": "https://github.com/toptobes/file-system-system"
     },
     {
-      "name": "2048-ASM",
-      "desc": "A colored 2048 terminal game made in MASM x64 assembly",
-      "tags": ["Assembly", "CLI"],
+      "name": "Magic-Square-ASM",
+      "desc": "Magic square creator & checker using some AVX512 & x87 (made for a school project who wanted it in Python lol)",
+      "tags": ["Assembly", "SIMD", "CLI"],
       "url": "https://github.com/toptobes/ASMPlaygroundV2",
       "stars": 3
     },
     {
-      "name": "Magic-Square-ASM",
-      "desc": "Magic square creator & checker using some AVX512 & x87 (made for a school project who wanted it in Python lol)",
-      "tags": ["Assembly", "SIMD", "CLI"],
+      "name": "Typef**k-Haskell",
+      "desc": "A Brainf**k interpreter solely in Haskell's type system (no TemplateHaskell)",
+      "tags": ["Haskell", "Type-magic", "Interpreter"],
+      "url": "https://github.com/toptobes/typefuck-haskell",
+      "stars": 7
+    },
+    {
+      "name": "2048-ASM",
+      "desc": "A colored 2048 terminal game made in MASM x64 assembly",
+      "tags": ["Assembly", "CLI"],
       "url": "https://github.com/toptobes/ASMPlaygroundV2",
       "stars": 3
     },
@@ -83,7 +90,7 @@
     },
     {
       "name": "brainf",
-      "desc": "An extremely small (176 chars) brainf**k interpreter",
+      "desc": "An extremely small (176 char) codegolfed brainf**k interpreter",
       "tags": ["C", "Interpreter"],
       "url": "https://github.com/toptobes/brainf",
       "stars": 1
