@@ -39,7 +39,7 @@
       "desc": "A Brainf**k interpreter solely in Haskell's type system (no TemplateHaskell)",
       "tags": ["Haskell", "Type-magic", "Interpreter"],
       "url": "https://github.com/toptobes/typefuck-haskell",
-      "stars": 7
+      "stars": 15
     },
     {
       "name": "2048-ASM",
