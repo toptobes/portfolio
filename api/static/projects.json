@@ -5,7 +5,14 @@
       "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
       "tags": ["Haskell", "Scotty", "PostgreSQL"],
       "url": "https://github.com/toptobes/realworld-haskell-scotty-example",
-      "stars": 14
+      "stars": 15
+    },
+    {
+      "name": "Typef**k-Haskell",
+      "desc": "A Brainf**k interpreter solely in Haskell's type system (no TemplateHaskell)",
+      "tags": ["Haskell", "Type-magic", "Interpreter"],
+      "url": "https://github.com/toptobes/typefuck-haskell",
+      "stars": 18
     },
     {
       "name": "Voxyl-Overlay",
@@ -33,13 +40,6 @@
       "tags": ["Assembly", "SIMD", "CLI"],
       "url": "https://github.com/toptobes/ASMPlaygroundV2",
       "stars": 3
-    },
-    {
-      "name": "Typef**k-Haskell",
-      "desc": "A Brainf**k interpreter solely in Haskell's type system (no TemplateHaskell)",
-      "tags": ["Haskell", "Type-magic", "Interpreter"],
-      "url": "https://github.com/toptobes/typefuck-haskell",
-      "stars": 15
     },
     {
       "name": "2048-ASM",
