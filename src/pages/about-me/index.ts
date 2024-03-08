@@ -11,7 +11,7 @@ const html = `
       <br>
       <p>Hey! I'm ${MY_NAME}, a passionate programmer, car enthusiast, and metalhead from the Austin area.</p>
       <br>
-      <p>I'm currently a student @ Austin Community College, pursuing an undergraduate degree in Computer Science.</p>
+      <p>I'm currently a full-time software engineer, and a student at Austin Community College, pursuing an undergraduate degree in Computer Science.</p>
       <br>
       <p>I enjoy all facets of programming, and have no clue what to put for the rest of this page.</p>
       <br>
