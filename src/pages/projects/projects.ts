@@ -16,7 +16,8 @@ export const preloadCards = () => {
 }
 
 export const getProjectCards = memo(async (): Promise<string> => {
-  const { projects } = await fetch(`${API_URL}/projects.json`).then(d => d.json());
+  // const { projects } = await fetch(`${API_URL}/projects.json`).then(d => d.json());
+  const { projects } = await import('../../assets/misc/projects.json');
   return makeCards(projects, colors);
 });
 

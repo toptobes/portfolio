@@ -1,5 +1,5 @@
 export { default as amonamarth } from './amonamarth.webp';
-// export { default as dsotm } from './dsotm.webp';
+export { default as dsotm } from './dsotm.webp';
 export { default as rammstein } from './rammstein.webp';
 export { default as eluveitie } from './eluveitie.webp';
 export { default as gnr } from './gnr.webp';
