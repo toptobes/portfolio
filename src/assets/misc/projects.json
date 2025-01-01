@@ -5,7 +5,7 @@
       "desc": "A haskell+scotty implementation of the 'https://realworld.io' API spec",
       "tags": ["Haskell", "Scotty", "PostgreSQL"],
       "url": "https://github.com/toptobes/realworld-haskell-scotty-example",
-      "stars": 23
+      "stars": 27
     },
     {
       "name": "Typef**k-Haskell",
@@ -50,7 +50,7 @@
     },
     {
       "name": "BadVM",
-      "desc": "A small 16-bit VM written in C w/ a custom typed Assembly lang written in Kotlin",
+      "desc": "A small 16-bit VM written in C w/ a custom \"typed assembly\" written in Kotlin",
       "tags": ["C", "Kotlin", "Assembly", "VM", "Compiler"],
       "url": "https://github.com/toptobes/BadVm",
       "stars": 1
